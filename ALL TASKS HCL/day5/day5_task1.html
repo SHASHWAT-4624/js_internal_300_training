@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hid1"> THIS IS THE END</h1>
+    <h2 id="hid2"> This is Day 5 of HCL Training </h2>
+    <p> shashwat</p>
+
+    <button type="submit" onclick="fun1()"> CLICK ME </button>
+    <button type="submit" onclick="fun2()"> CHANGE HEADING COLOR 2</button>
+
+    <button type="submit" id="bid1"> FOR ACTION</button>
+    <br>
+    <button type="submit" id="bid2"> FOR CHANGING CAPTION</button>
+    <br>
+    <button type="submit" id="bid3"> FOR CHANGING Color</button>
+    <br>
+    <button type="submit" id="bid4"> CHANGE BACKGROUND COLOR RED</button>
+    <br>
+    <button type="submit" id="bid5"> CHANGE BACKGROUND COLOR Green</button>
+    <br>
+    <button type="submit" id="bid6">CHANGE BACKGROUND COLOR Blue</button>
+    <br>
+
+
+
+
+<script>
+
+    document.getElementById("bid4").addEventListener("click", function() {
+        document.body.style.backgroundColor = "red";
+    });
+    document.getElementById("bid5").addEventListener("click", function() {
+        document.body.style.backgroundColor = "green";
+    }); 
+    document.getElementById("bid6").addEventListener("click", function() {
+        document.body.style.backgroundColor = "blue";
+    });
+
+
+
+
+
+    document.getElementById("bid2").addEventListener("click", function() {
+        document.getElementById("hid1").innerHTML = "THIS IS THE NEW ENDING";
+    });
+
+    document.getElementById("bid3").addEventListener("click", function() {
+        document.getElementById("hid2").style.color = "purple";
+    });
+
+    document.getElementById("bid1").addEventListener("click", function() {
+        document.getElementById("hid1").style.color = "green";
+        document.getElementById("hid2").style.color = "yellow";
+    });
+
+    function fun1() 
+    {
+        document.getElementById("hid1").style.color = "red";
+    }
+
+    function fun2() 
+    {
+        document.getElementById("hid2").style.color = "blue";
+    }
+
+</script>
+</body>
+</html>

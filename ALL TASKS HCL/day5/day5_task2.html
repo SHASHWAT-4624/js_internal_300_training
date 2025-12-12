@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form id="fid1">
+    <br>
+    <label for="USERID "> USERNAME </label>
+     <input type="text" id="text1" name="username" placeholder="Enter your name" >
+     <br>
+      <label for="PASSWORD "> PASSWORD </label>
+    <input type="password" id="pass1" name="password" placeholder="Enter your password" >
+    <br>
+    <button type="submit">Submit</button>
+    <br>
+    <p id="error1" style="color: red;"></p> 
+
+</form>
+
+
+
+<script>
+    document.getElementById("fid1").addEventListener("submit", function(event)
+     {
+
+        event.preventDefault();
+         
+
+        let a=document.getElementById("text1").value.trim();
+        let error=document.getElementById("error1");
+        if(a=="")
+     {
+        error.innerHTML="Value cannot be empty";
+     }
+     else{
+        error.style.color="green";
+        error.innerHTML="Form submitted successfully!";
+
+     }
+
+     });
+        
+
+     
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
