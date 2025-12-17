@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Project Demo</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("bg.jpg") no-repeat center/cover;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        body, input, select, button {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, nav h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        nav {
+            background: rgba(0,0,0,0.85);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #00ffcc;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #00ffcc;
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+            margin: 30px 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 0 30px 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.9);
+            flex: 1;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .left {
+            text-align: center;
+        }
+
+        .middle marquee {
+            height: 220px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #00b894;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #009973;
+        }
+
+        .error {
+            font-weight: bold;
+        }
+
+        .left a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+
+        .left a:hover {
+            color: #00b894;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <h2>HCL FINAL PROJECT</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">Courses</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<div class="title">
+    <h1>HCL Online Project</h1>
+</div>
+
+<div class="container">
+
+    <div class="card left">
+        <h2><strong>Quick Links</strong></h2>
+        <hr color="green">
+        <a href="about.html">About Us</a>
+        <a href="knowmore.html">Know More</a>
+        <a href="contact.html">Connect With Us</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="achievements.html">Our Achievements</a>
+        <a href="career.html">Career</a>
+    </div>
+
+   <div class="card middle">
+    <center>
+        <h2><strong>Important Notices</strong></h2>
+        <hr color="green">
+    </center>
+
+    <p style="font-family: cursive; font-size: 16px; line-height: 1.6; text-align: justify; color:magenta;">
+    HCL (Hindustan Computers Limited) is a major Indian multinational technology company,
+    founded in 1976, known for IT services, consulting, and outsourcing, operating globally
+    with key entities like HCLTech and HCLSoftware. It offers solutions in digital,
+    engineering, cloud, and AI, serving sectors from finance to manufacturing, and has
+    grown from a garage startup to a global conglomerate with significant revenue and
+    employees worldwide.
+</p>
+
+
+    <marquee direction="up" onmouseover="this.stop()" onmouseout="this.start()" height="120">
+        <center>
+            Notice 1<br>
+            Notice 2<br>
+            Notice 3<br>
+            Notice 4<br>
+            Notice 5<br>
+            Notice 6<br>
+            Notice 7<br>
+            Notice 8
+        </center>
+    </marquee>
+</div>
+
+
+    <div class="card">
+      <h2 style="text-align:center;"><strong>Student Registration</strong></h2>
+<hr color="green">
+        <form id="regForm" action="nextpage.html" method="get">
+            <table cellpadding="8">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td>
+                        <select id="course" name="course">
+                            <option value="">-- Select Course --</option>
+                            <option>Java</option>
+                            <option>Python</option>
+                            <option>JavaScript</option>
+                            <option>Web Development</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="terms"> I agree to Terms
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Register</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <p id="msg" class="error"></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</div>
+
+<script>
+document.getElementById("regForm").addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let course = document.getElementById("course").value;
+    let terms = document.getElementById("terms").checked;
+    let gender = document.querySelector('input[name="gender"]:checked');
+    let msg = document.getElementById("msg");
+
+    if (name === "") {
+        msg.style.color = "red";
+        msg.innerHTML = "Name is required";
+        return;
+    }
+
+    if (email === "" || !email.includes("@")) {
+        msg.style.color = "red";
+        msg.innerHTML = "Enter a valid email";
+        return;
+    }
+
+    if (!gender) {
+        msg.style.color = "red";
+        msg.innerHTML = "Please select gender";
+        return;
+    }
+
+    if (course === "") {
+        msg.style.color = "red";
+        msg.innerHTML = "Please select a course";
+        return;
+    }
+
+    if (!terms) {
+        msg.style.color = "red";
+        msg.innerHTML = "Please accept Terms & Conditions";
+        return;
+    }
+
+    msg.style.color = "green";
+    msg.innerHTML = "Registration Successful! Redirecting in 3 seconds...";
+
+    setTimeout(function () {
+        window.location.href =
+            "nextpage.html?name=" + encodeURIComponent(name) +
+            "&email=" + encodeURIComponent(email) +
+            "&gender=" + encodeURIComponent(gender.value) +
+            "&course=" + encodeURIComponent(course);
+    }, 3000);
+});
+</script>
+
+
+
+</body>
+</html>

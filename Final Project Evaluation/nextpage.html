@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Result</title>
+
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg") no-repeat center center fixed;
+    background-size: 100% 100%;
+    padding: 30px;
+    margin: 0;
+}
+
+
+        .box {
+            width: 420px;
+            margin: 80px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .box h2 {
+            color: #0a7cff;
+            transition: transform 0.3s, color 0.3s;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .box h2:hover {
+            color: #00b894;
+            transform: scale(1.05);
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .data {
+            text-align: left;
+            margin-top: 15px;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        img {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+ 
+
+    <h2>Student Registration</h2>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+    let params = new URLSearchParams(window.location.search);
+
+    let name = params.get("name");
+    let email = params.get("email");
+    let gender = params.get("gender");
+    let course = params.get("course");
+
+    let output = document.getElementById("output");
+
+    output.innerHTML = `
+        <div class="success">Registration Successful!</div>
+        <div class="data">
+            Name: ${name}<br>
+            Email: ${email}<br>
+            Gender: ${gender}<br>
+            Course: ${course}
+        </div>
+    `;
+</script>
+
+</body>
+</html>
