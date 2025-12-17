@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+</head>
+<body>
+
+<h2>Contact Us</h2>
+
+<form onsubmit="return validate()">
+    <input type="text" id="name" placeholder="Your Name"><br><br>
+    <textarea id="msg" placeholder="Message"></textarea><br><br>
+    <button type="submit">Send</button>
+    <p id="error" style="color:red;"></p>
+</form>
+
+<script>
+function validate() {
+    let name = document.getElementById("name").value.trim();
+    let msg = document.getElementById("msg").value.trim();
+    let error = document.getElementById("error");
+
+    if (name === "") {
+        error.innerText = "Name required";
+        return false;
+    }
+    if (msg === "") {
+        error.innerText = "Message required";
+        return false;
+    }
+
+    error.style.color = "green";
+    error.innerText = "Message Sent! Redirecting...";
+
+    setTimeout(function(){
+        window.location.href = "dashboard.html";
+    }, 1500);
+
+    return false;
+}
+</script>
+
+</body>
+</html>

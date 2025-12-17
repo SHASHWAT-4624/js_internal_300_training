@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box {
+            background: white;
+            padding: 30px;
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #error1 {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box" >
+        <h2>Login</h2>
+
+        <form id="fid1" action ="after_login.html" method="get">
+            <label for="text1">Username</label>
+            <input type="text" id="text1" name="username" placeholder="Enter your name" name="username">
+
+            <label for="pass1">Password</label>
+            <input type="password" id="pass1" name="password" placeholder="Enter your password" name="userpassword">
+
+            <button type="submit">Submit</button>
+            <button type="submit">Cancel</button>
+
+            <p id="error1"></p>
+        </form>
+    </div>
+
+    <script>
+document.getElementById("fid1").addEventListener("submit", function(event) {
+
+    let username = document.getElementById("text1").value.trim();
+    let password = document.getElementById("pass1").value.trim();
+    let error = document.getElementById("error1");
+
+    if (username === "" || password === "") {
+        event.preventDefault(); // stop only if error
+        error.style.color = "red";
+        error.innerHTML = "Username and Password cannot be empty";
+    }
+});
+</script>
+
+</body>
+</html>

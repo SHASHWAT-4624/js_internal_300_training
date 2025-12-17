@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2f3;
+        }
+        .box {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px gray;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+        }
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+        <input type="text" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button type="submit">Login</button>
+        <p id="error"></p>
+    </form>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let error = document.getElementById("error");
+
+    if (email.value.trim() === "") {
+        error.innerText = "Email required";
+        return;
+    }
+    if (!email.value.includes("@")) {
+        error.innerText = "Invalid email";
+        return;
+    }
+    if (password.value.length < 6) {
+        error.innerText = "Password must be at least 6 characters";
+        return;
+    }
+
+    error.style.color = "green";
+    error.innerText = "Login Successful! Redirecting...";
+
+    setTimeout(function(){
+        window.location.href = "dashboard.html";
+    }, 1500);
+});
+</script>
+
+</body>
+</html>
